@@ -33,6 +33,8 @@ public class CheckIfLLIsPalindrome {
 
         Node reversed = reverseList(second_head);
 
+        printList(reversed);
+
         while(currentNode != null && reversed != null){
             if(currentNode.data != reversed.data){
                 return false;
@@ -45,6 +47,15 @@ public class CheckIfLLIsPalindrome {
         return true;
     }
 
+    private static void printList(Node head) {
+        Node currentNode = head;
+        while(currentNode != null){
+            System.out.print(currentNode.data+"->");
+            currentNode = currentNode.next;
+        }
+        System.out.print("null\n");
+    }
+
     private static Node reverseList(Node currentNode) {
 
         if(currentNode.next == null){
@@ -53,6 +64,7 @@ public class CheckIfLLIsPalindrome {
 
         Node temp = reverseList(currentNode.next);
         currentNode.next.next = currentNode;
+        currentNode.next = null;
         return temp;
     }
 }
