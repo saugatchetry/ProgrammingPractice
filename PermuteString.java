@@ -4,15 +4,9 @@ import java.util.List;
 public class PermuteString {
     public static void main(String[] args) {
         String input = "ABC";
-
         int startIndex = 0;
         int endIndex = input.length() - 1;
         permuteString(input,startIndex, endIndex);
-
-//            for(String s : result){
-//                System.out.println(s);
-//            }
-
     }
 
     private static void permuteString(String input, int startIndex, int endIndex ) {

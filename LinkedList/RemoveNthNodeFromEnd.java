@@ -10,7 +10,7 @@ public class RemoveNthNodeFromEnd {
 
         printList(head);
 
-        int n = 3;
+        int n = 2;
 
         Node newHead = removeNthNodeFromEnd(head,n);
         printList(newHead);
